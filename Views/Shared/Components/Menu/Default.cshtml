@@ -1,0 +1,8 @@
+﻿@model IEnumerable<WebApplicationFront_End.Models.NewsType>
+<div class="navbar-nav mx-auto border-top">
+    <a href="/" class="nav-item nav-link active">Trang chủ</a>
+    @foreach(var item in Model)
+    {
+        <a href="#" class="nav-item nav-link">@item.Name</a>
+    }
+</div>

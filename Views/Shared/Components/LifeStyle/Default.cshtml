@@ -1,0 +1,32 @@
+﻿@model IEnumerable<WebApplicationFront_End.Models.News>
+@foreach (var item in Model)
+{
+            <div class="col-lg-6">
+                <div class="lifestyle-item rounded">
+                    <img src="http://localhost:5062/Upload/Images/@item.ImageUrl" class="img-fluid w-100 rounded" alt="">
+                    <div class="lifestyle-content">
+                        <div class="mt-auto">
+                            <a href="#" class="h4 text-white link-hover">@item.Title</a>
+                            <div class="d-flex justify-content-between mt-4">
+                                <a href="#" class="small text-white link-hover">@item.Author</a>
+                                @* <small class="text-white d-block"><i class="fas fa-calendar-alt me-1"></i> Dec 9, 2024</small> *@
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         @*    <div class="col-lg-6">
+                <div class="lifestyle-item rounded">
+                    <img src="http://localhost:5062/Upload/Images/@item.ImageUrl" class="img-fluid w-100 rounded" alt="">
+                    <div class="lifestyle-content">
+                        <div class="mt-auto">
+                            <a href="#" class="h4 text-white link-hover">@item.Title</a>
+                            <div class="d-flex justify-content-between mt-4">
+                                <a href="#" class="small text-white link-hover">@item.Author</a>
+                                 <small class="text-white d-block"><i class="fas fa-calendar-alt me-1"></i> Dec 9, 2024</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> *@
+}

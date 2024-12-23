@@ -1,0 +1,18 @@
+﻿@model WebApplicationFront_End.Models.News
+
+<div class="position-relative overflow-hidden rounded">
+    <img src="http://localhost:5062/Upload/Images/@Model.ImageUrl" class="img-fluid rounded img-zoomin" height="90px" width="750px" alt="">
+    <div class="d-flex justify-content-center px-4 position-absolute flex-wrap" style="bottom: 10px; left: 0;">
+        <a href="#" class="text-white me-3 link-hover"><i class="fa fa-clock"></i> 06 minute read</a>
+        <a href="#" class="text-white me-3 link-hover"><i class="fa fa-eye"></i> 3.5k Views</a>
+        <a href="#" class="text-white me-3 link-hover"><i class="fa fa-comment-dots"></i> 05 Comment</a>
+        <a href="#" class="text-white link-hover"><i class="fa fa-arrow-up"></i> 1.5k Share</a>
+    </div>
+</div>
+<div class="border-bottom py-3">
+    <a href="#" class="display-4 text-dark mb-0 link-hover">@Model.Title</a>
+</div>
+
+   
+    
+

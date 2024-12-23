@@ -1,0 +1,61 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!-- Main Post Section Start -->
+
+<div class="container-fluid ">
+    <div class="container py-5">
+        <div class="row g-4">
+            <div class="col-lg-7 col-xl-8 mt-0">
+
+               @await Component.InvokeAsync("News1")
+
+                <div class="bg-light p-4 rounded">
+                    @await Component.InvokeAsync("TopStory")
+                </div>
+            </div>
+            @await Component.InvokeAsync("MenuBar")
+        </div>
+    </div>
+</div>
+<!-- Main Post Section End -->
+<!-- Most Populer News Start -->
+<div class="container-fluid populer-news">
+    <div class="container">
+        <div class="tab-class mb-4">
+            <div class="row g-4">
+                <div class="col-lg-8 col-xl-9">
+
+
+                    @await Component.InvokeAsync("WhatsNew")
+
+
+
+                  
+                </div>
+                
+                <div class="col-lg-4 col-xl-3">
+                    <div class="row g-4">
+                        @await Component.InvokeAsync("PopularNews")
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-5 lifestyle">
+                <div class="border-bottom mb-4">
+                    <h1 class="mb-4">Life Style</h1>
+                </div>
+
+                <div class="row g-4">
+                    @await Component.InvokeAsync("LifeStyle")
+                </div>
+            </div>
+
+
+          
+
+        </div>
+    </div>
+</div>
+<!-- Most Populer News End -->

@@ -1,0 +1,41 @@
+﻿@model IEnumerable<WebApplicationFront_End.Models.News>
+@if (Model.Count() > 0)
+{
+    <div class="col-lg-5 col-xl-4">
+        <div class="bg-light rounded p-4 pt-0">
+            <div class="row g-4">
+                <div class="col-12">
+                    <div class="rounded overflow-hidden">
+                        <img src="http://localhost:5062/Upload/Images/@Model.FirstOrDefault().ImageUrl" class="img-fluid rounded img-zoomin w-100" alt="">
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="d-flex flex-column">
+                        <a href="#" class="h4 mb-2">@Model.FirstOrDefault().Title</a>
+                        <p class="fs-5 mb-0"><i class="fa fa-clock"> 06 minute read</i> </p>
+                        <p class="fs-5 mb-0"><i class="fa fa-eye"> 3.5k Views</i></p>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="row g-4 align-items-center">
+                        @foreach (var item in Model.Skip(1).ToList())
+                        {
+                            <div class="col-5">
+                                <div class="overflow-hidden rounded">
+                                    <img src="http://localhost:5062/Upload/Images/@item.ImageUrl" class="img-zoomin img-fluid rounded w-100" alt="">
+                                </div>
+                            </div>
+                            <div class="col-7">
+                                <div class="features-content d-flex flex-column">
+                                    <a href="#" class="h6">@item.Title</a>
+                                    <small><i class="fa fa-clock"> 06 minute read</i> </small>
+                                    <small><i class="fa fa-eye"> 3.5k Views</i></small>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

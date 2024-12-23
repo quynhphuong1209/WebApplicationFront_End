@@ -1,0 +1,19 @@
+﻿@model WebApplicationFront_End.Models.News
+
+<div class="news-2">
+    <h3 class="mb-4">Top Story</h3>
+</div>
+<div class="row g-4 align-items-center">
+    <div class="col-md-6">
+        <div class="rounded overflow-hidden">
+            <img src="http://localhost:5062/Upload/Images/@Model.ImageUrl" class="img-fluid rounded img-zoomin w-100" alt="">
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="d-flex flex-column">
+            <a href="#" class="h3">@Model.Title</a>
+            <p class="mb-0 fs-5"><i class="fa fa-clock"> 06 minute read</i> </p>
+            <p class="mb-0 fs-5"><i class="fa fa-eye"> 3.5k Views</i></p>
+        </div>
+    </div>
+</div>

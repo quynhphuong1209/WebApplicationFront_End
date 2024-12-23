@@ -1,0 +1,54 @@
+﻿@model IEnumerable<WebApplicationFront_End.Models.News>
+
+@if(Model.Count()>0)
+{
+    var data = Model.ToList();
+
+    <div class="row g-4">
+        <div class="col-lg-8">
+            <div class="position-relative rounded overflow-hidden">
+                <img src="http://localhost:5062/Upload/Images/@data[0].ImageUrl" class="img-zoomin img-fluid rounded w-100" alt="">
+                @* <div class="position-absolute text-white px-4 py-2 bg-primary rounded" style="top: 20px; right: 20px;">
+                    Sports
+                </div> *@
+            </div>
+            <div class="my-4">
+                <a href="#" class="h4">@data[0].Title.</a>
+            </div>
+            <div class="d-flex justify-content-between">
+                <a href="#" class="text-dark link-hover me-3"><i class="fa fa-clock"></i> 06 minute read</a>
+                <a href="#" class="text-dark link-hover me-3"><i class="fa fa-eye"></i> 3.5k Views</a>
+                <a href="#" class="text-dark link-hover me-3"><i class="fa fa-comment-dots"></i> 05 Comment</a>
+                <a href="#" class="text-dark link-hover"><i class="fa fa-arrow-up"></i> 1.5k Share</a>
+            </div>
+            <p class="my-4">
+                @data[0].Summary
+            </p>
+        </div>
+        <div class="col-lg-4">
+            <div class="row g-4">
+                @foreach (var item in data.Skip(1))
+                {
+                    <div class="col-12">
+                        <div class="row g-4 align-items-center">
+                            <div class="col-5">
+                                <div class="overflow-hidden rounded">
+                                    <img src="http://localhost:5062/Upload/Images/@item.ImageUrl" class="img-zoomin img-fluid rounded w-100" alt="">
+                                </div>
+                            </div>
+                            <div class="col-7">
+                                <div class="features-content d-flex flex-column">
+                                    @* <p class="text-uppercase mb-2">@item.TypeId<p> *@
+                                    <a href="#" class="h6">@item.Title</a>
+                                    @* <small class="text-body d-block"><i class="fas fa-calendar-alt me-1"></i> @item.Date</small> *@
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+}
+    
+

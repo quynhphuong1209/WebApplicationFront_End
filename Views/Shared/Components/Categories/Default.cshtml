@@ -1,0 +1,9 @@
+﻿@model IEnumerable<WebApplicationFront_End.Models.NewsType>
+<div class="d-flex flex-column text-start footer-item-3">
+    <h4 class="mb-4 text-white">Categories</h4>
+    @* a class="btn-link text-white" href=""><i class="fas fa-angle-right text-white me-2"></i> Thể thao</a> *@
+    @foreach(var item in Model)
+    {
+        <a class="btn-link text-white" href=""><i class="fas fa-angle-right text-white me-2"></i> @item.Name</a>
+    }
+</div>
